@@ -2,9 +2,10 @@
 
 namespace Gareth\TermApp\config;
 
-class Config
-{
+class Config {
+    public function handleArguments(): void {
+    }
 
-    public function handleArguments(): void {}
-    public function handleSwitches(): void {}
+    public function handleSwitches(): void {
+    }
 }
