@@ -7,31 +7,37 @@ use Gareth\TermApp\config\Config;
 
 final readonly class Tap
 {
-
     private Config $config;
     private Args $args;
 
-    public static function Go(array $args): static
+    /**
+     * @param array<string> $args
+     */
+    public static function Go(array $args): Tap
     {
         return new Tap($args);
     }
 
     /**
-     * @param array<string> $args
+     * @param array<string> $rawArgs
      */
     public function __construct(public array $rawArgs)
     {
+
+
+        $this->args = new Args($this->rawArgs);
+        $this->config = new Config();
         print_r($this->rawArgs);
     }
 
     public function bootstrapConfig(): void
     {
-        $this->config = new Config();
+        $this->config->run();
     }
 
     public function handleArguments(): void
     {
-        $this->args = new Args($this->rawArgs);
+        $this->args->run();
     }
 
     public function preRun(): void {}
@@ -39,8 +45,8 @@ final readonly class Tap
     public function run(): void
     {
         $controller = '';
-        //        $application = new $controller($this->config, $this->args);
-        //         $application->execute();
+        // $application = new $controller($this->config, $this->args);
+        // $application->execute();
 
     }
 
