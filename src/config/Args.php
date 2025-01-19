@@ -1,6 +1,6 @@
 <?php
 
-namespace Gareth\TermApp\utils;
+namespace Gareth\TermApp\config;
 
 final readonly class Args
 {

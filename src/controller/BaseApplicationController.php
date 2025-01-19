@@ -3,7 +3,7 @@
 namespace Gareth\TermApp\controller;
 
 use Gareth\TermApp\config\Config;
-use Gareth\TermApp\utils\Args;
+use Gareth\TermApp\config\Args;
 
 abstract class BaseApplicationController
 {
