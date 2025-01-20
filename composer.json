@@ -1,5 +1,5 @@
 {
-    "name": "gareth/term-app",
+    "name": "projector22/term-app",
     "description": "A basic terminal application framework",
     "type": "library",
     "require-dev": {
@@ -10,7 +10,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Gareth\\TermApp\\": "src/"
+            "Taskbench\\": "src/"
         }
     },
     "authors": [
@@ -19,5 +19,16 @@
             "email": "bravdthepally@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": ">=8.3.0"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Taskbench\\Installer::postInstall"
+        ],
+        "post-create-project-cmd": [
+            "Taskbench\\Installer::postCreateProject",
+            "Taskbench\\Installer::postInstall"
+        ]
+    }
 }

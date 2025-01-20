@@ -1,12 +1,14 @@
 <?php
 
-namespace Gareth\TermApp\config;
+namespace Taskbench\config;
 
-final readonly class Config
-{
-    public function run(): void {}
+final readonly class Config {
+    public function run(): void {
+    }
 
-    public function handleArguments(): void {}
+    public function handleArguments(): void {
+    }
 
-    public function handleSwitches(): void {}
+    public function handleSwitches(): void {
+    }
 }

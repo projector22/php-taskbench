@@ -1,6 +1,6 @@
 <?php
 
-use Gareth\TermApp\Tap;
+use Taskbench\Tap;
 
 require __DIR__ . "/vendor/autoload.php";
 
