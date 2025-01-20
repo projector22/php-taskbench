@@ -1,11 +1,10 @@
 <?php
 
-namespace Gareth\TermApp\utils;
+namespace Taskbench\utils;
 
-final readonly class Installer {
-    public static function PostCreateProject(): void {
-    }
+final readonly class Installer
+{
+    public static function PostCreateProject(): void {}
 
-    public static function PostInstall(): void {
-    }
+    public static function PostInstall(): void {}
 }

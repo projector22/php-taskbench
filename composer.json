@@ -1,5 +1,5 @@
 {
-    "name": "gareth/term-app",
+    "name": "projector22/term-app",
     "description": "A basic terminal application framework",
     "type": "library",
     "require-dev": {
@@ -10,7 +10,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Gareth\\TermApp\\": "src/"
+            "Taskbench\\": "src/"
         }
     },
     "authors": [
