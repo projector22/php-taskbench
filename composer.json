@@ -22,20 +22,13 @@
     "require": {
         "php": ">=8.3.0"
     },
-    "extra": {
-        "yii\\composer\\Installer::postCreateProject": {
-            "setPermission": [
-                {
-                    "runtime": "0777",
-                    "web/assets": "0777",
-                    "yii": "0755"
-                }
-            ]
-        },
-        "yii\\composer\\Installer::postInstall": {
-            "generateCookieValidationKey": [
-                "config/web.php"
-            ]
-        }
+    "scripts": {
+        "post-install-cmd": [
+            "Taskbench\\Installer::postInstall"
+        ],
+        "post-create-project-cmd": [
+            "Taskbench\\Installer::postCreateProject",
+            "Taskbench\\Installer::postInstall"
+        ]
     }
 }
