@@ -5,8 +5,9 @@ namespace Taskbench\utils;
 final readonly class Installer {
     public static function postCreateProject(): void {
         $directories = [
-            "tasks",
-            "models",
+            "config" => ["config.yml"],
+            "tasks" => [],
+            "models" => [],
         ];
 
         print_r(realpath(__DIR__ . "/../.."));
